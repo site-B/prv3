@@ -5,14 +5,14 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const TeamPage = () => (
   <Layout>
-    <SEO title="procedural" />
-    <h1>procedural v3 index page </h1>
+    <SEO title="about" />
+    <h1>ABOUT </h1>
     <p>index page</p>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
-export default IndexPage
+export default TeamPage
