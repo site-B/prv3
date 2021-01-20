@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const GlossaryPage = () => (
   <Layout>
     <SEO title="about" />
-    <h1>ABOUT </h1>
+    <h1>Glossary</h1>
     <p>index page</p>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>

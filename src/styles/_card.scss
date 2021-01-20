@@ -1,0 +1,13 @@
+.card {
+    margin-bottom: 2rem; 
+}
+
+ul.post-tags {
+    padding: 0; 
+    display: inline-flex;
+    list-style: none; 
+
+    lis {
+        margin-right: 10px; 
+    }
+}
