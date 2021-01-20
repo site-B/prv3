@@ -2,7 +2,6 @@
 title: 'FOURTH POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Víctor Balaguera'
-path: '/fourth-post'
 image: './004-fourth.jpg'
 tags: 
 - tags

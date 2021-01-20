@@ -30,7 +30,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className='container'>
-                <Navbar fixed='top' expand="sm">
+        <Navbar fixed='top' expand="sm" style={{ backgroundColor: "black"}}>
           <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

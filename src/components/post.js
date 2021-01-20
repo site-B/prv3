@@ -5,17 +5,17 @@ import Img from 'gatsby-image';
 import { Card, CardTitle, CardText, CardSubtitle, CardBody, Badge } from 'reactstrap'; 
 import { slugify } from '../utils/utilityFunctions'; 
 
-const Post = ({ title, author, path, date, body, fluid, tags }) => {
+const Post = ({ title, author, slug, date, body, fluid, tags }) => {
     return (
         <Card>
-            <Link to={path}>
+            <Link to={slug}>
                 <Img className='card-image-top' fluid={fluid}>
 
                 </Img>
             </Link>
             <CardBody>
                 <CardTitle>
-                  <Link to={path}>
+                  <Link to={slug}>
                     {title}  
                   </Link>
                 </CardTitle>
@@ -45,7 +45,7 @@ const Post = ({ title, author, path, date, body, fluid, tags }) => {
                     }
                 </ul>
                 <Link
-                    to={path} 
+                    to={slug} 
                     className='btn btn-outline-primary float-right'>
                     Read more
                 </Link>

@@ -2,7 +2,6 @@
 title: 'FIFTH POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Víctor Balaguera'
-path: '/fifth-post'
 image: './005-fifth.jpg'
 tags: 
 - tags

@@ -2,7 +2,6 @@
 title: 'FIRST POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Víctor Balaguera'
-path: '/first-post'
 image: './001-first.jpg'
 tags: 
 - tags

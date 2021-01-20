@@ -2,7 +2,6 @@
 title: 'SECOND POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Víctor Balaguera'
-path: '/second-post'
 image: './002-second.jpg'
 tags: 
 - tags

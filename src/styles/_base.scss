@@ -6,9 +6,10 @@
     font-family: $site-font;
   }
   a {
-    color: #0056b3;
+    color: #dc143c;
+    transition: .5s ease; 
     &:hover {
-      color: #007bff;
+      color: #b01030;
       text-decoration: none;
     }
   }
@@ -25,9 +26,10 @@
   }
   .navbar-light .navbar-nav .nav-link,
   .navbar-light .navbar-brand {
-    color: #0056b3;
+    color: #dc143c;
+    transition: .5s ease; 
     &:hover {
-      color: #007bff;
+      color: #b01030;
     }
   }
   ul {
