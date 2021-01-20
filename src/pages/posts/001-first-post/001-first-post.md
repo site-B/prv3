@@ -6,7 +6,6 @@ path: '/first-post'
 image: './001-first.jpg'
 tags: 
 - tags
-- lol
 ---
 
 This is the text. 

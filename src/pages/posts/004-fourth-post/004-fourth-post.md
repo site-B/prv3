@@ -7,6 +7,8 @@ image: './004-fourth.jpg'
 tags: 
 - tags
 - lol
+- FUCK 
+- DIC 
 ---
 
 This is the text. 

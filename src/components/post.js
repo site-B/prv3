@@ -1,9 +1,11 @@
+// post cards for previsualization at index
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image'; 
-import { Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reactstrap'; 
+import { Card, CardTitle, CardText, CardSubtitle, CardBody, Badge } from 'reactstrap'; 
+import { slugify } from '../utils/utilityFunctions'; 
 
-const Post = ({ title, author, path, date, body, fluid }) => {
+const Post = ({ title, author, path, date, body, fluid, tags }) => {
     return (
         <Card>
             <Link to={path}>
@@ -28,6 +30,20 @@ const Post = ({ title, author, path, date, body, fluid }) => {
                 <CardText>
                     {body}
                 </CardText>
+                <ul className='post-tags'>
+                    {
+                        tags.map(tag => (
+                            <li key={tag}>
+                                <Link to={`/tag/${slugify(tag)}`}>
+                                    <Badge style={{backgroundColor: "black"}}
+                                    className='text-uppercase'>
+                                        {tag}
+                                    </Badge>
+                                </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
                 <Link
                     to={path} 
                     className='btn btn-outline-primary float-right'>

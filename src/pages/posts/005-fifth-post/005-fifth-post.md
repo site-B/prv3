@@ -7,6 +7,9 @@ image: './005-fifth.jpg'
 tags: 
 - tags
 - lol
+- FUCK 
+- DIC 
+- Bulletpoins
 ---
 
 This is the text. 
