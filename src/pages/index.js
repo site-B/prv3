@@ -11,8 +11,8 @@ import { Row, Col } from 'reactstrap';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="procedural" />
-    <h1>procedural v3 index page </h1>
+    <SEO title="home" keywords={[`procedural`, `gatsby`]}/>
+    <h1 className='titles'>procedural</h1>
     <p>index page</p>
 
     <Row>

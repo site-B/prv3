@@ -13,7 +13,7 @@ import Header from "./header";
 import Footer from './Footer'; 
 import "../styles/index.scss"; 
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageTitle}) => (
   <StaticQuery 
     query={graphql`
     query SiteTitleQuery {
@@ -35,6 +35,7 @@ const Layout = ({ children }) => (
         className='container'
         id='content'
         >
+        <h1>{pageTitle}</h1>
         {children}
       </div>
       

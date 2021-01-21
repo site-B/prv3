@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 const Sidebar = () => (
     <div>
         <Card>
-            <CardBody>
+            <CardBody className='cardBody'>
                 <CardTitle className='text-center text-uppercase mb-3'>
                     Newsletter
                 </CardTitle>
@@ -21,7 +21,7 @@ const Sidebar = () => (
             </CardBody>
         </Card>
         <Card>
-            <CardBody>
+            <CardBody className='cardBody'>
                 <CardTitle>
                     Today's video
                 </CardTitle>
@@ -29,7 +29,7 @@ const Sidebar = () => (
             </CardBody>
         </Card>
         <Card>
-            <CardBody>
+            <CardBody className='cardBody'>
                 <CardTitle>
                     TIL
                 </CardTitle>
@@ -37,7 +37,7 @@ const Sidebar = () => (
             </CardBody>
         </Card>
         <Card>
-            <CardBody>
+            <CardBody className='cardBody'>
                 <CardTitle>
                     Today on this day
                 </CardTitle>
@@ -45,7 +45,7 @@ const Sidebar = () => (
             </CardBody>
         </Card>
         <Card>
-            <CardBody>
+            <CardBody className='cardBody'>
                 <CardTitle>
                     Twitter feed? 
                 </CardTitle>
@@ -53,7 +53,7 @@ const Sidebar = () => (
             </CardBody>
         </Card>
         <Card>
-            <CardBody>
+            <CardBody className='cardBody'>
                 <CardTitle className='text-center text-uppercase mb-3'>
                     Recent Posts
                 </CardTitle>
@@ -67,7 +67,7 @@ const Sidebar = () => (
                                         <Link to={node.fields.slug}>
                                             <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
                                         </Link>
-                                        <CardBody>
+                                        <CardBody className='cardBody'>
                                             <CardTitle>
                                                 <Link to={node.fields.slug}>
                                                     {node.frontmatter.title}

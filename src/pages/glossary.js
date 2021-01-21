@@ -10,8 +10,10 @@ const GlossaryPage = () => (
     <SEO title="about" />
     <h1>Glossary</h1>
     <p>index page</p>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Link 
+          className='myReadMoreButtons'
+          to={'/'}>Go home
+    </Link>
   </Layout>
 )
 

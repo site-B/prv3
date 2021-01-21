@@ -1,7 +1,12 @@
 import React from 'react'; 
+import logo from '../images/logo.png'; 
+import { Link } from 'gatsby'; 
 
 const Footer = () => (
     <div className='site-footer'>
+        <Link to={'/'}>
+            <img className='myLogo-footer' src={logo}></img>
+        </Link>
         <h4 className='text-center'>
             procedural
         </h4>

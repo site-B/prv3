@@ -1,25 +1,26 @@
 import React from 'react';
 import Layout from '../components/layout'; 
-import Sidebar from '../components/Sidebar'; 
 import { graphql, Link } from 'gatsby'; 
 import SEO from '../components/seo';
-import { Badge, Row, Col, Card, CardBody, CardSubtitle } from 'reactstrap'; 
+import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'; 
 import Img from 'gatsby-image'; 
 import { slugify } from '../utils/utilityFunctions'; 
+import authors from '../utils/authors'; 
 
 const SinglePost = ({ data }) => {
     const post = data.markdownRemark.frontmatter; 
+    const author = authors.find(x => x.name === post.author).imageUrl; 
 
     return (
         <Layout>
             <SEO title={post.title}/>
-            <h1>{post.title}</h1>
+            <h1 className='postTitles'>{post.title}</h1>
 
                     <Card>
                         <Img className='card-image-top' fluid={post.image.childImageSharp.fluid}>
 
                         </Img>
-                        <CardBody>
+                        <CardBody className='cardBody'>
                             <CardSubtitle>
                                 <span className='text-info'>
                                     {post.date}
@@ -36,13 +37,20 @@ const SinglePost = ({ data }) => {
                                     post.tags.map(tag => (
                                         <li key={tag}>
                                             <Link to={`/tag/${slugify(tag)}`}>
-                                                <Badge style={{backgroundColor: "black"}}>{tag}</Badge>
+                                                <Badge className='myTags'>{tag}</Badge>
                                             </Link>
                                         </li>
                                     ))
                                 }
                             </ul>
+                            <br/>
+                            <Link
+                                to={'/'} 
+                                className='myReadMoreButtons float-left'>
+                                Go back
+                            </Link>
                         </CardBody>
+
                     </Card>
 
         </Layout>

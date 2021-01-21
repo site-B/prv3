@@ -6,12 +6,13 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const TagsPage = () => (
-  <Layout>
+  <Layout pageTitle='tags'>
     <SEO title="about" />
-    <h1>ABOUT </h1>
     <p>tags page</p>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Link 
+          className='myReadMoreButtons'
+          to={'/'}>Go home
+    </Link>
   </Layout>
 )
 

@@ -1,6 +1,7 @@
 
 const { slugify } = require('./src/utils/utilityFunctions');
 const path = require('path'); 
+const authors = require('./src/utils/authors'); 
 
 // single post generator
 exports.onCreateNode = ({ node, actions }) => {
@@ -45,7 +46,9 @@ exports.createPages = ({ actions, graphql }) => {
                 component: singlePostTemplate,
                 context: {
                     // passing slug, PENDING TAGS
-                    slug: node.fields.slug
+                    slug: node.fields.slug,
+                    // finding author imageUrl from authors.js and passing it to the single post template 
+                    imageUrl: authors.find(x => x.name === node.frontmatter.author).imageUrl
                 }
             })
         })

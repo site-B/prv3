@@ -1,15 +1,16 @@
 .site-footer {
-    background-color: $white;
+    background-color: $pitch-black;
     margin-top: 1.5rem;
     padding: .6rem;
     text-align: center;
+    color: $crimson; 
   
     .footer-social-links {
       text-align: center;
   
       ul.social-links-list {
         li {
-          margin-right: 25px;
+          margin: 0 .7rem;
           display: inline-block;
   
           a {

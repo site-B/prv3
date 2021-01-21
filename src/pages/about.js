@@ -6,12 +6,16 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const AboutPage = () => (
-  <Layout>
+  <Layout pageTitle='about us'>
     <SEO title="about" />
-    <h1>ABOUT </h1>
     <p>about page</p>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+
+    <h1>+ contact</h1>
+    <p>contact info</p>
+    <Link 
+          className='myReadMoreButtons'
+          to={'/'}>Go home
+    </Link>
   </Layout>
 )
 
