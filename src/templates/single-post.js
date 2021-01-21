@@ -5,11 +5,20 @@ import SEO from '../components/seo';
 import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'; 
 import Img from 'gatsby-image'; 
 import { slugify } from '../utils/utilityFunctions'; 
-import authors from '../utils/authors'; 
+/* import authors from '../utils/authors';  */
+import { DiscussionEmbed } from 'disqus-react'; 
 
-const SinglePost = ({ data }) => {
+const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
-    const author = authors.find(x => x.name === post.author).imageUrl; 
+    /* const author = authors.find(x => x.name === post.author).imageUrl;  */
+    const baseUrl = 'https://www.gatsbytutorial.co.uk/' // PLACEHOLDER
+
+    const disqusShortname = 'https-gatsbytutorial-co-uk';
+    const disqusConfig = {
+        identifier: data.markdownRemark.id,
+        title: post.title,
+        url: baseUrl + pageContext.slug
+    }
 
     return (
         <Layout>
@@ -52,7 +61,59 @@ const SinglePost = ({ data }) => {
                         </CardBody>
 
                     </Card>
-
+                    <h3 className='text-center'>
+                        Share this post
+                    </h3>
+                    <div className='text-center social-share-links'>
+                        <ul>
+                            <li>
+                                <a href={'https://www.facebook.com/sharer/sharer.php?u=' + baseUrl + 
+                                pageContext.slug}
+                                className='facebook' target='_blank'
+                                rel='noopener noreferrer'>
+                                    <i className="fab fa-facebook-f fa-2x"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={'https://www.twitter.com/share?url=' + 
+                                baseUrl + 
+                                pageContext.slug +
+                                '&text=' +
+                                post.title +
+                                '&via' +
+                                'twitterHandle'}
+                                className='twitter' target='_blank'
+                                rel='noopener noreferrer'>
+                                    <i className="fab fa-twitter fa-2x"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={'https://www.plus.google.com/share?url' + 
+                                baseUrl + 
+                                pageContext.slug
+                                }
+                                className='google' target='_blank'
+                                rel='noopener noreferrer'>
+                                    <i className="fab fa-google fa-2x"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={'https://www.linkedin.com/shareArticle?url=' + 
+                                baseUrl + 
+                                pageContext.slug
+                                }
+                                className='linkedin' target='_blank'
+                                rel='noopener noreferrer'>
+                                    <i className="fab fa-linkedin fa-2x"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <DiscussionEmbed
+                        shortname={discusShortname}
+                        config={disqusConfig}>
+                            
+                    </DiscussionEmbed>
         </Layout>
     )
 
