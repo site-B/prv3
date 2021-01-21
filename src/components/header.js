@@ -10,7 +10,8 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import logo from '../images/logo.png'; 
+import logo from '../images/logo.svg'; 
+import tfrtc from '../images/tfrtc.svg'; 
 
 class Header extends React.Component {
   constructor(props) {
@@ -32,10 +33,10 @@ class Header extends React.Component {
     return (
       <div className='container'>
         <Navbar fixed='top' expand="sm" style={{ backgroundColor: "$pitch-black"}}>
-          <NavbarBrand href="/">
+          <NavbarBrand className='myLogoContainer' href="/">
             <img className='myLogo' src={logo}></img>
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle}><img className='myLogo' src={tfrtc}></img></NavbarToggler>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>

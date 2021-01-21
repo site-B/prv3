@@ -10,7 +10,7 @@ const TeamPage = () => (
     <SEO title="team" />
     <p>ditto</p>
     <Link 
-          className='myReadMoreButtons'
+          className='myButton'
           to={'/'}>Go home
     </Link>
   </Layout>

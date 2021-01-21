@@ -6,19 +6,19 @@ import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap';
 import Img from 'gatsby-image'; 
 import { slugify } from '../utils/utilityFunctions'; 
 /* import authors from '../utils/authors';  */
-import { DiscussionEmbed } from 'disqus-react'; 
+/* import { DiscussionEmbed } from 'disqus-react'; PENDING */
 
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     /* const author = authors.find(x => x.name === post.author).imageUrl;  */
     const baseUrl = 'https://www.gatsbytutorial.co.uk/' // PLACEHOLDER
 
-    const disqusShortname = 'https-gatsbytutorial-co-uk';
+/*     const disqusShortname = 'https-gatsbytutorial-co-uk';
     const disqusConfig = {
         identifier: data.markdownRemark.id,
         title: post.title,
         url: baseUrl + pageContext.slug
-    }
+    } PENDING */
 
     return (
         <Layout>
@@ -55,7 +55,7 @@ const SinglePost = ({ data, pageContext }) => {
                             <br/>
                             <Link
                                 to={'/'} 
-                                className='myReadMoreButtons float-left'>
+                                className='myButton float-left'>
                                 Go back
                             </Link>
                         </CardBody>
@@ -109,11 +109,7 @@ const SinglePost = ({ data, pageContext }) => {
                             </li>
                         </ul>
                     </div>
-                    <DiscussionEmbed
-                        shortname={discusShortname}
-                        config={disqusConfig}>
-                            
-                    </DiscussionEmbed>
+
         </Layout>
     )
 

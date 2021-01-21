@@ -25,7 +25,7 @@ const NotFoundPage = ({data}) => {
           <p>Until we meet again.</p>
         </div>
         <Link 
-          className='myReadMoreButtons'
+          className='myButton'
           to={'/'}>Go home
         </Link>
       </CardBody>

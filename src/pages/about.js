@@ -13,7 +13,7 @@ const AboutPage = () => (
     <h1>+ contact</h1>
     <p>contact info</p>
     <Link 
-          className='myReadMoreButtons'
+          className='myButton'
           to={'/'}>Go home
     </Link>
   </Layout>

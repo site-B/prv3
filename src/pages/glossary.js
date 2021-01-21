@@ -9,9 +9,9 @@ const GlossaryPage = () => (
   <Layout>
     <SEO title="about" />
     <h1>Glossary</h1>
-    <p>index page</p>
+    <p>glossary page</p>
     <Link 
-          className='myReadMoreButtons'
+          className='myButton'
           to={'/'}>Go home
     </Link>
   </Layout>
