@@ -2,7 +2,7 @@
 title: 'FIFTH POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Victor Balaguera'
-image: './005-fifth.jpg'
+image: 005-fifth.jpg
 tags: 
 - tags
 - lol

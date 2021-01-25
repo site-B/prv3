@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo";
 import { Card, CardBody } from 'reactstrap'; 
-import { Link } from 'gatsby'; 
+import { Link, graphql } from 'gatsby'; 
 import Img from 'gatsby-image'; 
 
 const NotFoundPage = ({data}) => {

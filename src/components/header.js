@@ -34,9 +34,9 @@ class Header extends React.Component {
       <div className='container'>
         <Navbar fixed='top' expand="sm" style={{ backgroundColor: "$pitch-black"}}>
           <NavbarBrand className='myLogoContainer' href="/">
-            <img className='myLogo' src={logo}></img>
+            <img className='myLogo' alt='logo' src={logo}></img>
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle}><img className='myLogo' src={tfrtc}></img></NavbarToggler>
+          <NavbarToggler onClick={this.toggle}><img className='myLogo' alt='logo' src={tfrtc}></img></NavbarToggler>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>

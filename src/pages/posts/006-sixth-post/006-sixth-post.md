@@ -2,7 +2,7 @@
 title: 'SIXTH POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Victor Balaguera'
-image: './006-sixth.jpg'
+image: 006-sixth.jpg
 tags: 
 - tags
 - lol

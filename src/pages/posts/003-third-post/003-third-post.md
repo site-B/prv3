@@ -2,7 +2,7 @@
 title: 'THIRD POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Victor Balaguera'
-image: './003-third.jpg'
+image: 003-third.jpg
 tags: 
 - tags
 - lol

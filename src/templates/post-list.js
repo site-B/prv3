@@ -62,7 +62,7 @@ export const postListQuery = graphql`
                         tags
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 650, maxHeight: 371, quality: 90) {
+                                fluid(maxWidth: 650, quality: 90) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
