@@ -6,9 +6,15 @@ import SEO from "../components/seo"
 import Post from '../components/Post'; 
 import Sidebar from '../components/Sidebar'; 
 import { Row, Col } from 'reactstrap'; 
+import PaginationLinks from '../components/PaginationLinks'; 
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+
+  const postsPerPage = 5; 
+  let numberOfPages 
+
+  return (
+    <Layout>
     <SEO title="home" keywords={[`procedural`, `gatsby`]}/>
     <h1 className='titles'>procedural</h1>
 
@@ -17,6 +23,11 @@ const IndexPage = () => (
         <StaticQuery 
         query={indexQuery}
         render={data => {
+
+          numberOfPages = Math.ceil(
+          data.allMarkdownRemark.totalCount / postsPerPage
+          ); 
+
           return (
             <div>
               {
@@ -33,6 +44,7 @@ const IndexPage = () => (
                   /> 
                 ))
               }
+              <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />
             </div>
           )
         }}
@@ -45,14 +57,16 @@ const IndexPage = () => (
       </Col>
     </Row>
 
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 const indexQuery = graphql`
 query {
   allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}
     limit: 5
     ) {
+    totalCount
     edges {
       node {
         id
