@@ -46,4 +46,4 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
   )
 }
 
-export default PaginationLinks
+export default PaginationLinks; 

@@ -1,9 +1,9 @@
 
 const authors = [
     {
-        name: 'Víctor Balaguera',
+        name: 'Victor Balaguera',
         imageUrl: 'Victor.jpg',
-        bio: 'this is my bio, not yours. Get outta here',
+        bio: `Same as it ever was, same as it ever was.`,
         facebook: 'https://www.google.com/',
         instagram: 'https://www.google.com/',
         twitter: 'https://www.google.com/',

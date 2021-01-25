@@ -1,6 +1,5 @@
-
-const { slugify } = require('./src/utils/utilityFunctions');
 const path = require('path'); 
+const { slugify } = require('./src/utils/utilityFunctions');
 const authors = require('./src/utils/authors'); 
 const _ = require('lodash'); 
 
@@ -17,18 +16,19 @@ exports.onCreateNode = ({ node, actions }) => {
     }
 }
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions; 
     
     
     const templates = {
-        singlePost: path.resolve('src/templates/single-post.js'),
-        tagsPage: path.resolve('src/templates/tags-page.js'),
-        tagPosts: path.resolve('src/templates/tag-post.js'),
-        postList: path.resolve('src/templates/post-list.js'),
+        singlePost: path.resolve('./src/templates/single-post.js'),
+        tagsPage: path.resolve('./src/templates/tags-page.js'),
+        tagPosts: path.resolve('./src/templates/tag-post.js'),
+        postList: path.resolve('./src/templates/post-list.js'),
+        authorPosts: path.resolve('./src/templates/author-posts.js'), 
     } 
 
-    return graphql(`
+    const res = await graphql(`
         {
             allMarkdownRemark {
                 edges {
@@ -44,48 +44,49 @@ exports.createPages = ({ actions, graphql }) => {
                 }
             }
         }
-    `).then(res => {
-        if(res.errors) return Promise.reject(res.errors)
+    `)
+    
+    if(res.errors) return Promise.reject(res.errors)
 
-        const posts = res.data.allMarkdownRemark.edges
+    const posts = res.data.allMarkdownRemark.edges
 
-        posts.forEach(({node}) => {
-            createPage({
-                path: node.fields.slug,
-                component: templates.singlePost,
-                context: {
-                    // passing slug, PENDING TAGS
-                    slug: node.fields.slug,
-                    // finding author imageUrl from authors.js and passing it to the single post template 
-                    imageUrl: authors.find(x => x.name === node.frontmatter.author).imageUrl
-                }
+    posts.forEach(({node}) => {
+        createPage({
+            path: node.fields.slug,
+            component: templates.singlePost,
+            context: {
+                // passing slug, PENDING TAGS
+                slug: node.fields.slug,
+                // finding author imageUrl from authors.js and passing it to the single post template 
+
+            },
+        })
+    })
+
+
+            // creating post pages
+
+    const postsPerPage = 5
+    const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numberOfPages }).forEach((_, index) => {
+        const isFirstPage = index === 0
+        const currentPage = index + 1
+
+        // skip first page and go to index.js
+        if (isFirstPage) return
+
+        createPage({
+            path: `/page/${currentPage}`,
+            component: templates.postList,
+            context: {
+                limit: postsPerPage,
+                skip: index * postsPerPage,
+                numberOfPages: numberOfPages,
+                currentPage: currentPage,
+            },
             })
         })
-
-
-                // creating post pages
-
-        const postsPerPage = 5
-        const numberOfPages = Math.ceil(posts.length / postsPerPage)
-
-        Array.from({ length: numberOfPages }).forEach((_, index) => {
-            const isFirstPage = index === 0
-            const currentPage = index + 1
-
-            // skip first page and go to index.js
-            if (isFirstPage) return
-
-            createPage({
-                path: `/page/${currentPage}`,
-                component: templates.postList,
-                context: {
-                  limit: postsPerPage,
-                  skip: index * postsPerPage,
-                  numberOfPages: numberOfPages,
-                  currentPage: currentPage,
-                },
-              })
-            })
 
 
 
@@ -128,7 +129,21 @@ exports.createPages = ({ actions, graphql }) => {
         })
 
 
-    })
+
+
+
+
+        // CREATING PAGES FOR EACH AUTHOR'S POSTS: 
+        authors.forEach(author => {
+            createPage({
+                path: `/author/${slugify(author.name)}`,
+                component: templates.authorPosts,
+                context: {
+                    authorName: author.name,
+                    imageUrl: author.imageUrl, 
+                }, 
+            })
+        })
 }
 
 

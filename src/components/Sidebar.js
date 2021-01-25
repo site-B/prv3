@@ -7,7 +7,7 @@ const Sidebar = () => (
     <div>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle className='text-center text-uppercase mb-3'>
+                <CardTitle className='text-center mb-3'>
                     Newsletter
                 </CardTitle>
                 <Form className='text-center'>
@@ -22,7 +22,7 @@ const Sidebar = () => (
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle>
+                <CardTitle className='text-center mb-3'>
                     Today's video
                 </CardTitle>
                 <img src='https://via.placeholder.com/320x200' alt='placeholder image' style={{ width: "100%"}}></img>
@@ -30,31 +30,31 @@ const Sidebar = () => (
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle>
+                <CardTitle className='text-center mb-3'>
                     TIL
                 </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder image' style={{ width: "100%"}}></img>
+                <img src='https://via.placeholder.com/320x200' alt='placeholder image 2' style={{ width: "100%"}}></img>
             </CardBody>
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle>
+                <CardTitle className='text-center mb-3'>
                     Today on this day
                 </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder image' style={{ width: "100%"}}></img>
+                <img src='https://via.placeholder.com/320x200' alt='placeholder image 3' style={{ width: "100%"}}></img>
             </CardBody>
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle>
+                <CardTitle className='text-center mb-3'>
                     Twitter feed? 
                 </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder image' style={{ width: "100%"}}></img>
+                <img src='https://via.placeholder.com/320x200' alt='placeholder image 4' style={{ width: "100%"}}></img>
             </CardBody>
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle className='text-center text-uppercase mb-3'>
+                <CardTitle className='text-center mb-3'>
                     Recent Posts
                 </CardTitle>
                 <StaticQuery 

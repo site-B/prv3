@@ -7,7 +7,7 @@ import { slugify } from '../utils/utilityFunctions';
 
 const Post = ({ title, author, slug, date, body, fluid, tags }) => {
     return (
-        <Card>
+        <Card className='card'>
             <Link to={`/${slug}`}>
                 <Img className='card-image-top' fluid={fluid}>
 

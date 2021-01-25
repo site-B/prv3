@@ -10,6 +10,7 @@ const GlossaryPage = () => (
     <SEO title="about" />
     <h1>Glossary</h1>
     <p>glossary page</p>
+    <br></br>
     <Link 
           className='myButton'
           to={'/'}>Go home

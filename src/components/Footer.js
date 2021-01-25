@@ -11,7 +11,7 @@ const Footer = () => (
             procedural
         </h4>
         <p className='text-center'>
-            Social Media Links, if necessary. asdass
+            Social Media Links, if necessary. PLACEHOLDER TEXT HERE.
         </p>
         <div className='footer-social-links'>
             <ul className='social-links-list'>

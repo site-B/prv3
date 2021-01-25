@@ -1,11 +1,15 @@
 ---
-title: 'SECOND POST TEST - is this working? -'
+title: 'SIXTH POST TEST - is this working? -'
 date: 2021/01/20
-author: 'Victor Balaguera'
-image: './002-second.jpg'
+author: 'Author Placeholder'
+image: './007-seventh.jpg'
 tags: 
 - tags
 - lol
+- FUCK 
+- DIC 
+- Bulletpoins
+- sixth
 ---
 
 This is the text. 
