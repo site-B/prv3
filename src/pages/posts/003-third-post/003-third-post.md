@@ -7,6 +7,7 @@ tags:
 - tags
 - lol
 - FUCK 
+excerpt: excerpt test
 ---
 
 This is the text. 

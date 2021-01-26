@@ -8,6 +8,7 @@ tags:
 - lol
 - FUCK 
 - DIC 
+excerpt: excerpt test
 ---
 
 This is the text. 

@@ -10,6 +10,7 @@ tags:
 - DIC 
 - Bulletpoins
 - sixth
+excerpt: excerpt test
 ---
 
 This is the text. 

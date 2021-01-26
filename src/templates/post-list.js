@@ -24,6 +24,7 @@ const postList = (props) => {
                         author={node.frontmatter.author}
                         date={node.frontmatter.date}
                         body={node.excerpt}
+                        excerpt={node.frontmatter.excerpt}
                         tags={node.frontmatter.tags}
                         fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
@@ -60,6 +61,7 @@ export const postListQuery = graphql`
                         date
                         author
                         tags
+                        excerpt
                         image {
                             childImageSharp {
                                 fluid(maxWidth: 650, quality: 90) {

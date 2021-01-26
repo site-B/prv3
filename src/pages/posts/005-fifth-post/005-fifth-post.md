@@ -9,6 +9,7 @@ tags:
 - FUCK 
 - DIC 
 - Bulletpoins
+excerpt: excerpt test
 ---
 
 This is the text. 

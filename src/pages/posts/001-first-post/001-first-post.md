@@ -5,6 +5,7 @@ author: 'Victor Balaguera'
 image: 001-first-post.jpg
 tags: 
 - tags
+excerpt: excerpt test
 ---
 
 This is the text. 

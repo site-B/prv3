@@ -6,6 +6,7 @@ image: 002-second-post.jpg
 tags: 
 - tags
 - lol
+excerpt: excerpt test
 ---
 
 This is the text. 

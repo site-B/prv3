@@ -20,6 +20,7 @@ const tagPosts = ({ data, pageContext }) => {
                     author={node.frontmatter.author}
                     date={node.frontmatter.date}
                     body={node.excerpt}
+                    excerpt={node.frontmatter.excerpt}
                     tags={node.frontmatter.tags}
                     fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
@@ -43,6 +44,7 @@ export const tagQuery = graphql`
                         date
                         author
                         tags 
+                        excerpt
                         image{
                             childImageSharp{
                                 fluid(maxWidth: 960, quality: 90) {
