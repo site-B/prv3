@@ -24,8 +24,7 @@ const authorPosts = ({ data, pageContext }) => {
                     date={node.frontmatter.date}
                     body={node.excerpt}
                     tags={node.frontmatter.tags}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    />
+
             ))}
             <Link 
                 className='myButton'
@@ -46,17 +45,10 @@ export const authorQuery = graphql`
             edges {
                 node {
                     id 
-                    frontmatter {
+                    frontmatter { 
                         title 
                         date
                         tags
-                        image{
-                            childImageSharp{
-                                fluid(maxWidth: 960, quality: 90) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
                     }
                     fields {
                         slug
