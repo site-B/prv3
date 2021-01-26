@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Post from '../components/Post'; 
+import Post from '../components/post'; 
 import Sidebar from '../components/Sidebar'; 
 import { Row, Col } from 'reactstrap'; 
 import PaginationLinks from '../components/PaginationLinks'; 

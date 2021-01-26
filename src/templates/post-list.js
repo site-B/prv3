@@ -1,7 +1,7 @@
 //
 import React from 'react';
 import Layout from '../components/layout';
-import Post from '../components/Post';
+import Post from '../components/post';
 import { graphql } from 'gatsby';
 import { Row, Col } from 'reactstrap'; 
 import Sidebar from '../components/Sidebar'; 
