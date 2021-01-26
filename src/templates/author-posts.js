@@ -1,7 +1,7 @@
-/* import React from 'react'; 
+import React from 'react'; 
 import { Link } from "gatsby"
 import Layout from '../components/layout';
-import Post from '../components/post';
+import Post from '../components/Post';
 import { graphql } from 'gatsby'; 
 import authors from '../utils/authors';
 
@@ -24,7 +24,8 @@ const authorPosts = ({ data, pageContext }) => {
                     date={node.frontmatter.date}
                     body={node.excerpt}
                     tags={node.frontmatter.tags}
-
+                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                    />
             ))}
             <Link 
                 className='myButton'
@@ -45,10 +46,17 @@ export const authorQuery = graphql`
             edges {
                 node {
                     id 
-                    frontmatter { 
+                    frontmatter {
                         title 
                         date
                         tags
+                        image{
+                            childImageSharp{
+                                fluid(maxWidth: 960) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                     fields {
                         slug
@@ -60,4 +68,4 @@ export const authorQuery = graphql`
     }
 `
 
-export default authorPosts;  */
+export default authorPosts; 

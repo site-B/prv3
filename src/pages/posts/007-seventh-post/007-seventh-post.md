@@ -2,7 +2,7 @@
 title: 'SIXTH POST TEST - is this working? -'
 date: 2021/01/20
 author: 'Author Placeholder'
-image: 007-seventh.jpg
+image: 007-seventh-post.jpg
 tags: 
 - tags
 - lol

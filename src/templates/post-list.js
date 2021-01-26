@@ -1,7 +1,7 @@
 //
 import React from 'react';
 import Layout from '../components/layout';
-import Post from '../components/post';
+import Post from '../components/Post';
 import { graphql } from 'gatsby';
 import { Row, Col } from 'reactstrap'; 
 import Sidebar from '../components/Sidebar'; 
@@ -25,6 +25,7 @@ const postList = (props) => {
                         date={node.frontmatter.date}
                         body={node.excerpt}
                         tags={node.frontmatter.tags}
+                        fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
                 ))}
                 <PaginationLinks 
@@ -59,6 +60,13 @@ export const postListQuery = graphql`
                         date
                         author
                         tags
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 650, quality: 90) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                     fields {
                         slug
