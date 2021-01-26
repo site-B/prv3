@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql }) => {
         tagsPage: path.resolve('./src/templates/tags-page.js'),
         tagPosts: path.resolve('./src/templates/tag-post.js'),
         postList: path.resolve('./src/templates/post-list.js'),
-        authorPosts: path.resolve('./src/templates/author-posts.js'), 
+        /* authorPosts: path.resolve('./src/templates/author-posts.js'), */ 
     } 
 
     const res = await graphql(`
@@ -126,7 +126,7 @@ exports.createPages = async ({ actions, graphql }) => {
         })
 
         // CREATING PAGES FOR EACH AUTHOR'S POSTS: 
-        authors.forEach(author => {
+/*         authors.forEach(author => {
             createPage({
                 path: `/author/${slugify(author.name)}`,
                 component: templates.authorPosts,
@@ -135,7 +135,7 @@ exports.createPages = async ({ actions, graphql }) => {
                     imageUrl: author.imageUrl, 
                 }, 
             })
-        })
+        }) */
 }
 
 

@@ -1,4 +1,4 @@
-import React from 'react'; 
+/* import React from 'react'; 
 import { Link } from "gatsby"
 import Layout from '../components/layout';
 import Post from '../components/post';
@@ -60,4 +60,4 @@ export const authorQuery = graphql`
     }
 `
 
-export default authorPosts; 
+export default authorPosts;  */
