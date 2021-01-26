@@ -44,6 +44,11 @@
     margin-bottom: 2rem; 
   }
 
+  .subtitles {
+    font-weight: 500;
+    color: $crimson;
+  }
+
   .postTitles{
     font-weight: 900; 
   }
@@ -56,4 +61,8 @@
   .myLogo-footer {
     width: 3rem;
     height: 3rem; 
+  }
+
+  .glossaryEntry {
+    font-size: 2rem; 
   }

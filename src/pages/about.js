@@ -9,9 +9,9 @@ import AuthorImage from '../images/Victor.jpg';
 import { slugify } from '../utils/utilityFunctions'; 
 
 const AboutPage = () => (
-  <Layout className='titles' pageTitle='about + contact'>
-    <SEO title="about" />
-
+  <Layout>
+    <SEO title="about + contact" />
+    <h1 className='titles'>about + contact</h1>
     <Row className='mb-4'>
       <div className= 'col-md-3'>
         <img src={AuthorImage} style={{ maxWidth: '100%'}} alt="author's pic">

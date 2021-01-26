@@ -10,8 +10,9 @@ import AuthorPlaceholder from '../images/AuthorPlaceholder.jpg';
 import { slugify } from '../utils/utilityFunctions'; 
 
 const TeamPage = () => (
-  <Layout pageTitle='Team Page'>
-    <SEO title="team" keywords={[`procedural`, `gatsby`, `blog`]}/>
+  <Layout>
+    <SEO title="team page" keywords={[`procedural`, `gatsby`, `blog`]}/>
+    <h1 className='titles'>Team Page</h1>
     <Row className='mb-4'>
       <div className= 'col-md-3'>
         <img src={AuthorImage} style={{ maxWidth: '100%'}} alt="author's pic">
