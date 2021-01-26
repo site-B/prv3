@@ -23,9 +23,9 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) => {
                     <span className='text-info'>
                         {date}
                     </span> by {' '}
-                    <span className='text-info'>
+                    <Link className='text-info' to={'/author/victor-balaguera'}>
                         {author}
-                    </span>
+                    </Link>
                 </CardSubtitle>
                 <CardText>
                     {body}
