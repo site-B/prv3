@@ -7,7 +7,7 @@ import { Row, Col } from 'reactstrap';
 import Sidebar from '../components/Sidebar'; 
 import PaginationLinks from '../components/PaginationLinks'; 
 
-const postList = props => {
+const postList = (props) => {
     const posts = props.data.allMarkdownRemark.edges
     const { currentPage, numberOfPages } = props.pageContext 
 

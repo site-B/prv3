@@ -88,8 +88,6 @@ exports.createPages = async ({ actions, graphql }) => {
             })
         })
 
-
-
         // tags PAGE GENERATOR; getting all tags
         let tags = []
         _.each(posts, edge => {
@@ -116,7 +114,6 @@ exports.createPages = async ({ actions, graphql }) => {
             }
         })
 
-
         // tag post page creation here: 
         tags.forEach(tag => {
             createPage({
@@ -127,11 +124,6 @@ exports.createPages = async ({ actions, graphql }) => {
                 }
             })
         })
-
-
-
-
-
 
         // CREATING PAGES FOR EACH AUTHOR'S POSTS: 
         authors.forEach(author => {
