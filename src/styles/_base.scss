@@ -39,9 +39,10 @@
   }
 
   .titles {
-    font-weight: 900; 
+    font-weight: 700; 
     color: $crimson; 
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
+    letter-spacing: .05rem; 
   }
 
   .subtitles {
@@ -65,4 +66,16 @@
 
   .glossaryEntry {
     font-size: 2rem; 
+  }
+
+  .sidebarTitle {
+    font-weight: 600; 
+  }
+
+  .sidebarText, .copyrightText {
+    font-size: .85rem; 
+  }
+
+  p, .sidebarText {
+    line-height: 1.6rem; // this is questionable
   }

@@ -39,9 +39,9 @@ class Header extends React.Component {
           <NavbarToggler onClick={this.toggle}><img className='myLogo' alt='logo' src={tfrtc}></img></NavbarToggler>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
+{/*               <NavItem>
                 <NavLink href="/team">team</NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink href="/glossary">glossary</NavLink>
               </NavItem>

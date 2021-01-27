@@ -29,7 +29,7 @@ const AboutPage = () => (
               {authors[0].bio}
             </CardText>
             <CardText>
-              This is a placeholder. In the final project the "team page" will be erased. 
+            This blog is a small side-project designed as an excellent excuse to finally tackle GraphQL, Gatsby, and Bootstrap through Reactstrap.
             </CardText>
             <CardText>
               <Link to='mailto:victorbalaguera@protonmail.com'>Contact info: victorbalaguera@protonmail.com</Link>
