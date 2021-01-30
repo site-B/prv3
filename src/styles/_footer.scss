@@ -6,9 +6,13 @@
     color: $crimson; 
 
     .footerTitle {
-      font-size: 2rem; 
-      margin: .5rem; 
+      font-size: 1.4rem; 
       letter-spacing: .05rem;
+    }
+
+    .myLogo-footer {
+      width: 3rem;
+      height: 3rem; 
     }
   
     .footer-social-links {
