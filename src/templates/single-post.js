@@ -11,7 +11,7 @@ import { slugify } from '../utils/utilityFunctions';
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     /* const author = authors.find(x => x.name === post.author).imageUrl;  */
-    const baseUrl = 'https://www.gatsbytutorial.co.uk/' // PLACEHOLDER
+    const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' // PLACEHOLDER
 
 /*     const disqusShortname = 'https-gatsbytutorial-co-uk';
     const disqusConfig = {
@@ -61,6 +61,28 @@ const SinglePost = ({ data, pageContext }) => {
                         </CardBody>
 
                     </Card>
+                    <h3 className='text-center'>
+                        Share this post
+                    </h3>
+                    <div className='text-center social-share-links'>
+                        <ul>
+                            <li>
+                                <a href={'https://www.twitter.com/share?url=' + 
+                                baseUrl + 
+                                pageContext.slug +
+                                '&text=' +
+                                post.title +
+                                '&via' +
+                                'twitterHandle'}
+                                className='twitter' target='_blank'
+                                rel='noopener noreferrer'>
+                                    <i className="fab fa-twitter fa-2x"/>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
 
         </Layout>
     )
