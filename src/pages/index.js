@@ -38,7 +38,7 @@ const IndexPage = () => {
                   author={node.frontmatter.author}
                   date={node.frontmatter.date}
                   slug={node.fields.slug}
-                  body={node.excerpt}
+                  excerpt={node.frontmatter.excerpt}
                   fluid={node.frontmatter.image.childImageSharp.fluid}
                   tags={node.frontmatter.tags}
                   /> 
@@ -75,6 +75,7 @@ query {
           date
           author
           tags
+          excerpt
           image {
             childImageSharp {
               fluid(quality: 85, maxWidth: 960) {

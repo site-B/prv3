@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import authors from '../utils/authors.js'
 import { Row, Card, CardText, CardBody, CardTitle, Button } from 'reactstrap'; 
 import AuthorImage from '../images/Victor.jpg';
-import { slugify } from '../utils/utilityFunctions'; 
 
 const AboutPage = () => (
   <Layout className='titles' pageTitle='about + contact'>
@@ -29,12 +28,12 @@ const AboutPage = () => (
               {authors[0].bio}
             </CardText>
             <CardText>
-              This is a placeholder. In the final project the "team page" will be erased. 
+            This blog is a small side-project designed as an excellent excuse to finally tackle GraphQL, Gatsby, and Bootstrap through Reactstrap.
             </CardText>
             <CardText>
               <Link to='mailto:victorbalaguera@protonmail.com'>Contact info: victorbalaguera@protonmail.com</Link>
             </CardText>
-            <Button className='myButton float-left' color='crimson' href={`/author/${slugify(authors[0].name)}`}>
+            <Button className='myButton float-left' color='crimson' href='https://quizzical-lamport-4cf71d.netlify.app/index.html' taget='_blank'>
               View his works.
             </Button>
           </CardBody>

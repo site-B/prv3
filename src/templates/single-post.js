@@ -31,10 +31,10 @@ const SinglePost = ({ data, pageContext }) => {
                         </Img>
                         <CardBody className='cardBody'>
                             <CardSubtitle>
-                                <span className='text-info'>
+                                <span className='post-info'>
                                     {post.date}
                                 </span> by{' '}
-                                <span className='text-info'>
+                                <span className='post-info'>
                                     {post.author}
                                 </span>
                             </CardSubtitle>

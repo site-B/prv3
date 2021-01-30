@@ -10,8 +10,11 @@ const Footer = () => (
         <h4 className='text-center'>
             procedural
         </h4>
-        <p className='text-center'>
-            Social Media Links, if necessary. PLACEHOLDER TEXT HERE.
+        <p className='copyrightText text-center'>
+        © 2021 Víctor Balaguera. All rights reserved over every original text chunks and other happenings.
+        </p>
+        <p className='copyrightText text-center'>
+        Everything else belongs to their respective owners.
         </p>
         <div className='footer-social-links'>
             <ul className='social-links-list'>

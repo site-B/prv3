@@ -1,60 +1,45 @@
 import React from 'react';
-import { Card, CardTitle, CardBody, Form, FormGroup, Input, Button } from 'reactstrap'; 
+import { Card, CardTitle, CardText, CardBody } from 'reactstrap'; 
 import { Link, graphql, StaticQuery } from 'gatsby'; 
 import Img from 'gatsby-image'; 
+import YouTube from 'react-youtube'; 
+
+const opts = {
+    height: '100%',
+    width: '100%'
+}
 
 const Sidebar = () => (
     <div>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle className='text-center mb-3'>
-                    Newsletter
-                </CardTitle>
-                <Form className='text-center'>
-                    <FormGroup>
-                        <Input type='email' name='email' placeholder='Your email here'/>
-                    </FormGroup>
-                    <Button className='btn btn-outline-success text-uppercase'>
-                        It's yours, my friend
-                    </Button>
-                </Form>
-            </CardBody>
-        </Card>
-        <Card>
-            <CardBody className='cardBody'>
-                <CardTitle className='text-center mb-3'>
+                <CardTitle className='sidebarTitle text-center mb-3'>
                     Today's video
                 </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder' style={{ width: "100%"}}></img>
+                <CardText className='sidebarText'>
+                    Someone made the wise, wise decision of mixing Surveillance Camera Man with Postal 2. Note: I do not condone this kind of fun fuckery.
+                </CardText>
+                <YouTube opts={opts}
+                    videoId="lDq4ELQPrVA"
+                />
             </CardBody>
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle className='text-center mb-3'>
+                <CardTitle className='sidebarTitle text-center mb-3'>
                     TIL
                 </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder' style={{ width: "100%"}}></img>
+                <CardText className='sidebarText'>
+                Rudolph Valentino became a star after his appearance in The Four Horsemen of the Apocalypse, a 1921 war epic silent film based on the Spanish book Los cuatro jinetes del Apocalipsis written by Vicente Blasco Ibáñez.
+                </CardText>
+                <YouTube opts={opts}
+                    videoId="H2pjqE-qjsc"
+                />
             </CardBody>
         </Card>
         <Card>
             <CardBody className='cardBody'>
-                <CardTitle className='text-center mb-3'>
-                    Today on this day
-                </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder' style={{ width: "100%"}}></img>
-            </CardBody>
-        </Card>
-        <Card>
-            <CardBody className='cardBody'>
-                <CardTitle className='text-center mb-3'>
-                    Twitter feed? 
-                </CardTitle>
-                <img src='https://via.placeholder.com/320x200' alt='placeholder' style={{ width: "100%"}}></img>
-            </CardBody>
-        </Card>
-        <Card>
-            <CardBody className='cardBody'>
-                <CardTitle className='text-center mb-3'>
+                <CardTitle className='sidebarTitle text-center mb-3'>
                     Recent Posts
                 </CardTitle>
                 <StaticQuery 
