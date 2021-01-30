@@ -16,7 +16,6 @@ const GlossaryPage = () => (
     <SEO title="about" />
     <h1 className='titles'>Glossary</h1>
     <p className='subtitles'>The glossary compiles everything that needs an explanation.</p>
-    <br></br>
     <Card style={{ minHeight: '100%', color: 'crimson'}}>
           <CardBody className='cardBody'>
             <CardTitle className='glossaryEntry'>
