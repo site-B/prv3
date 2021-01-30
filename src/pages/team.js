@@ -6,12 +6,12 @@ import SEO from "../components/seo"
 import authors from '../utils/authors.js'
 import { Row, Card, CardText, CardBody, CardTitle, Button } from 'reactstrap'; 
 import AuthorImage from '../images/Victor.jpg';
+import AuthorPlaceholder from '../images/AuthorPlaceholder.jpg';
 import { slugify } from '../utils/utilityFunctions'; 
 
-const AboutPage = () => (
-  <Layout className='titles' pageTitle='about + contact'>
-    <SEO title="about" />
-
+const TeamPage = () => (
+  <Layout pageTitle='Team Page'>
+    <SEO title="team" keywords={[`procedural`, `gatsby`, `blog`]}/>
     <Row className='mb-4'>
       <div className= 'col-md-3'>
         <img src={AuthorImage} style={{ maxWidth: '100%'}} alt="author's pic">
@@ -21,18 +21,11 @@ const AboutPage = () => (
       <div className='col-md-8'>
         <Card style={{ minHeight: '100%', color: 'crimson'}}>
           <CardBody className='cardBody'>
-            <CardTitle className='titles'>
+            <CardTitle>
               {authors[0].name}
             </CardTitle>
-            <br></br>
             <CardText>
               {authors[0].bio}
-            </CardText>
-            <CardText>
-              This is a placeholder. In the final project the "team page" will be erased. 
-            </CardText>
-            <CardText>
-              <Link to='mailto:victorbalaguera@protonmail.com'>Contact info: victorbalaguera@protonmail.com</Link>
             </CardText>
             <Button className='myButton float-left' color='crimson' href={`/author/${slugify(authors[0].name)}`}>
               View his works.
@@ -41,7 +34,28 @@ const AboutPage = () => (
         </Card>
       </div>
     </Row>
-    <br></br>
+    <Row className='mb-4'>
+      <div className= 'col-md-3'>
+        <img src={AuthorPlaceholder} style={{ maxWidth: '100%'}} alt="author's pic">
+
+        </img>
+      </div>
+      <div className='col-md-8'>
+        <Card style={{ minHeight: '100%', color: 'crimson'}}>
+          <CardBody className='cardBody'>
+            <CardTitle>
+              {authors[1].name}
+            </CardTitle>
+            <CardText>
+              {authors[1].bio}
+            </CardText>
+            <Button className='myButton float-left' color='crimson' href={`/author/${slugify(authors[1].name)}`}>
+              View her works.
+            </Button>
+          </CardBody>
+        </Card>
+      </div>
+    </Row>
     <Link 
           className='myButton'
           to={'/'}>Go home
@@ -49,4 +63,4 @@ const AboutPage = () => (
   </Layout>
 )
 
-export default AboutPage
+export default TeamPage

@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { graphql } from 'gatsby'; 
 import Layout from '../components/layout';
-import Post from '../components/post'; 
+import Post from '../components/Post'; 
 
 const tagPosts = ({ data, pageContext }) => {
     const { tag } = pageContext; 
@@ -20,7 +20,6 @@ const tagPosts = ({ data, pageContext }) => {
                     author={node.frontmatter.author}
                     date={node.frontmatter.date}
                     body={node.excerpt}
-                    excerpt={node.frontmatter.excerpt}
                     tags={node.frontmatter.tags}
                     fluid={node.frontmatter.image.childImageSharp.fluid}
                     />
@@ -44,7 +43,6 @@ export const tagQuery = graphql`
                         date
                         author
                         tags 
-                        excerpt
                         image{
                             childImageSharp{
                                 fluid(maxWidth: 960, quality: 90) {
