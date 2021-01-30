@@ -23,7 +23,6 @@ const GlossaryPage = () => (
                 Same as it ever was.
               </Link>
             </CardTitle>
-            <br></br>
             <CardText className='glossaryText'>
             Johnathan Demme's 1983 Stop Making Sense is not only one of the greatest movies ever made, but it is the origin of arguably <a href='https://open.spotify.com/album/4FR8Z6TvIsC56NLyNomNRE' target='_blank'> the best Talking Heads album</a>.  Ever.
             </CardText>
