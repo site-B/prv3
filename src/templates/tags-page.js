@@ -8,8 +8,9 @@ import { Link } from 'gatsby';
 const tagsPage = ({ pageContext }) => {
     const { tags, tagPostCounts } = pageContext; 
     return (
-        <Layout pageTitle='Tags'>
+        <Layout>
             <SEO title='Tags' keywords={['tags', 'topics']}/> 
+            <h1 className='titles'>Tags as far as the eye can see</h1>
                 <ul>
                     
                     {tags.map(tag => (

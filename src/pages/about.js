@@ -8,8 +8,9 @@ import { Row, Card, CardText, CardBody, CardTitle, Button } from 'reactstrap';
 import AuthorImage from '../images/Victor.jpg';
 
 const AboutPage = () => (
-  <Layout className='titles' pageTitle='about + contact'>
-    <SEO title="about" />
+  <Layout className='titles'>
+    <SEO title="about + contact" />
+    <h1 className='titles'>about + contact</h1>
 
     <Row className='mb-4'>
       <div className= 'col-md-3'>

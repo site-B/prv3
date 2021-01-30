@@ -7,7 +7,7 @@ const Footer = () => (
         <Link to={'/'}>
             <img className='myLogo-footer' alt='logo' src={logo}></img>
         </Link>
-        <h4 className='text-center'>
+        <h4 className='footerTitle text-center'>
             procedural
         </h4>
         <p className='copyrightText text-center'>
@@ -16,42 +16,6 @@ const Footer = () => (
         <p className='copyrightText text-center'>
         Everything else belongs to their respective owners.
         </p>
-        <div className='footer-social-links'>
-            <ul className='social-links-list'>
-                <li>
-                    <a 
-                        href='www.google.com' 
-                        target='_blank' 
-                        rel='noopener noreferrer' className='facebook'>
-                        <i className="fab fa-facebook-f"/>
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href='www.google.com' 
-                        target='_blank' 
-                        rel='noopener noreferrer' className='facebook'>
-                        <i className="fab fa-twitter"/>
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href='www.google.com' 
-                        target='_blank' 
-                        rel='noopener noreferrer' className='facebook'>
-                        <i className="fab fa-youtube"/>
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href='www.google.com' 
-                        target='_blank' 
-                        rel='noopener noreferrer' className='facebook'>
-                        <i className="fab fa-github"/>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
 ); 
 

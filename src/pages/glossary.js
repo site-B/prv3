@@ -1,10 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Card, CardBody, CardTitle, CardText, Button } from 'reactstrap'; 
-import authors from '../utils/authors'; 
+import { Card, CardBody, CardTitle, CardText } from 'reactstrap'; 
+import YouTube from 'react-youtube'; 
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const opts = {
+  height: '500px',
+  width: '100%'
+}
 
 const GlossaryPage = () => (
   <Layout>
@@ -14,22 +19,18 @@ const GlossaryPage = () => (
     <br></br>
     <Card style={{ minHeight: '100%', color: 'crimson'}}>
           <CardBody className='cardBody'>
-            <CardTitle className='titles'>
-              {authors[0].name}
+            <CardTitle className='glossaryEntry'>
+              <Link to={'/same-as-it-ever-was'}>
+                Same as it ever was.
+              </Link>
             </CardTitle>
             <br></br>
-            <CardText>
-              {authors[0].bio}
+            <CardText className='glossaryText'>
+            Johnathan Demme's 1983 Stop Making Sense is not only one of the greatest movies ever made, but it is the origin of arguably <a href='https://open.spotify.com/album/4FR8Z6TvIsC56NLyNomNRE' target='_blank'> the best Talking Heads album</a>.  Ever.
             </CardText>
-            <CardText>
-            This blog is a small side-project designed as an excellent excuse to finally tackle GraphQL, Gatsby, and Bootstrap through Reactstrap.
-            </CardText>
-            <CardText>
-              <Link to='mailto:victorbalaguera@protonmail.com'>Contact info: victorbalaguera@protonmail.com</Link>
-            </CardText>
-            <Button className='myButton float-left' color='crimson' href='https://quizzical-lamport-4cf71d.netlify.app/index.html' taget='_blank'>
-              View his works.
-            </Button>
+            <YouTube opts={opts}
+                    videoId="TGofoH9RDEA"
+                />
           </CardBody>
         </Card>
     <Link 

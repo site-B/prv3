@@ -53,7 +53,7 @@ const Sidebar = () => (
                                             <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
                                         </Link>
                                         <CardBody className='cardBody'>
-                                            <CardTitle>
+                                            <CardTitle className='text-center mb-3'>
                                                 <Link to={node.fields.slug}>
                                                     {node.frontmatter.title}
                                                 </Link>
