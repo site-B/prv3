@@ -57,7 +57,7 @@ function SEO({ description, lang, image, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: "https://elegant-bassi-d0fe18.netlify.app/twitterimage.png",
+          content: "https://elegant-bassi-d0fe18.netlify.app/logo.png",
         },
         {
           name: `twitter:creator`,
