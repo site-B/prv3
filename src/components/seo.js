@@ -16,10 +16,10 @@ function SEO({ description, lang, meta, image, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
+            defaultTitle: title
+            metadescription: description
             author
-            image
+            defaultImage: image
           }
         }
       }
