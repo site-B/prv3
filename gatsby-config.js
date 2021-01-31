@@ -3,7 +3,7 @@ module.exports = {
     title: `procedural`,
     description: `Made in Madrid`,
     author: `Víctor Balaguera`,
-    image: `/images/logo.jpg`,
+    image: `/images/logo.png`,
     twitterUsername: "@balaguera",
   },
   plugins: [

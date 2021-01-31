@@ -56,6 +56,10 @@ function SEO({ description, lang, meta, image, title }) {
           content: `summary`,
         },
         {
+          name: `twitter:image`,
+          content: `https://elegant-bassi-d0fe18.netlify.app/twitterimage.png`
+        },
+        {
           name: `twitter:creator`,
           content: site.siteMetadata.author || ``,
         },
