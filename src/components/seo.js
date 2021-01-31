@@ -93,13 +93,13 @@ function SEO({ description, lang, image: metaImage, meta, title, pathname }) {
           },
           {
             name: "twitter:card", 
-            content: image,
+            content: "summary_large_image",
           },
         ]
         : [
           {
             name: "twitter:card",
-            content: "summary",
+            content: "https://elegant-bassi-d0fe18.netlify.app/logo.png",
           }
         ])
         .concat(meta)}
