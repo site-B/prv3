@@ -4,6 +4,7 @@ module.exports = {
     description: `Made in Madrid`,
     author: `Víctor Balaguera`,
     image: `/images/logo.png`,
+    keywords: `fuckery, fun, balaguera, coding`,
     twitterUsername: "@balaguera",
     siteUrl: "https://elegant-bassi-d0fe18.netlify.app/", //PLACEHOLDER
   },

@@ -17,10 +17,10 @@ const Sidebar = () => (
                     Today's video
                 </CardTitle>
                 <CardText className='sidebarText'>
-                    Someone made the wise, wise decision of mixing Surveillance Camera Man with Postal 2. Note: I do not condone this kind of fun fuckery.
+                    The first seconds of Mr. Self Destruct (from NIN's <a href='https://open.spotify.com/album/3nJnyDV8fwFpffo0EyHQto?autoplay=true' target='_blank' rel="noreferrer">The Downward Spiral</a>) belong to 1971's <a href='https://www.imdb.com/title/tt0066434/?ref_=nv_sr_srsg_0' target='_blank' rel="noreferrer">THX 1138</a>. The first film by George Lucas. 
                 </CardText>
                 <YouTube opts={opts}
-                    videoId="lDq4ELQPrVA"
+                    videoId="cOppY-p7gQI"
                 />
             </CardBody>
         </Card>

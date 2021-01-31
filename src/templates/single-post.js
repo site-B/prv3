@@ -10,14 +10,16 @@ import { slugify } from '../utils/utilityFunctions';
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' 
+    const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null
 
     return (
         <Layout>
             <SEO 
                 title={post.title}
                 description={post.excerpt}
-                image={post.image}
+                image={image}
                 author={post.author}
+                pathname={this.props.location.pathname}
             />
             <h1 className='titles'>{post.title}</h1>
 
@@ -101,6 +103,10 @@ export const postQuery = graphql`
                         fluid(quality: 100, maxWidth: 960) {
                             ...GatsbyImageSharpFluid
                         }
+                        resize(width: 1200) {
+                            src
+                            height
+                          }
                     }
                 }
 
