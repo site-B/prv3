@@ -8,36 +8,21 @@ function SEO({ description, lang, meta, image, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 360) {
-                      ...GatsbyImageSharpFluid
-                  }
-                  }
-                }
-                excerpt
-              }
-            }
-          }
-        }
         site {
           siteMetadata {
             title
             description
             author
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = allMarkdownRemark.edges.node.frontmatter.excerpt
+  const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  image = site.siteMetadata.image
+  const defaultImage = image || site.siteMetadata.image
 
   return (
     <Helmet
@@ -48,6 +33,10 @@ function SEO({ description, lang, meta, image, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -57,7 +46,7 @@ function SEO({ description, lang, meta, image, title }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: defaultImage,
         },
         {
           property: `og:type`,
@@ -79,10 +68,6 @@ function SEO({ description, lang, meta, image, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-        {
-          name: `twitter:card`,
-          content: 'summary_large_image',
-        }
       ].concat(meta)}
     />
   )
