@@ -30,10 +30,10 @@ const Sidebar = () => (
                     TIL
                 </CardTitle>
                 <CardText className='sidebarText'>
-                Rudolph Valentino became a star after his appearance in The Four Horsemen of the Apocalypse, a 1921 war epic silent film based on the Spanish book Los cuatro jinetes del Apocalipsis written by Vicente Blasco Ibáñez.
+                The Future Refused To Change. 
                 </CardText>
                 <YouTube opts={opts}
-                    videoId="H2pjqE-qjsc"
+                    videoId="cMP9PPOoFiw"
                 />
             </CardBody>
         </Card>
