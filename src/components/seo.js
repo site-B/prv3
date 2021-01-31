@@ -8,19 +8,34 @@ function SEO({ description, lang, meta, image, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 360) {
+                      ...GatsbyImageSharpFluid
+                  }
+                  }
+                }
+                excerpt
+              }
+            }
+          }
+        }
         site {
           siteMetadata {
             title
             description
             author
-            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = excerpt || allMarkdownRemark.edges.node.frontmatter.exceprt
   const defaultTitle = site.siteMetadata?.title
   image = site.siteMetadata.image
 
