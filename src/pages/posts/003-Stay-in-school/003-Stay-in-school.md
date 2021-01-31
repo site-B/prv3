@@ -9,9 +9,9 @@ tags:
 - Dostoevsky
 ---
 <br>
-<p>Filling documents and doing paperwork, like any bureaucratic process, is a mental mouthful full of unavoidable shortcomings. 
+<p>Filling documents and doing paperwork, like any bureaucratic process, is a mental mouthful full of unavoidable shortcomings. </p>
 
-Since I still don't have a steady occupation these days, occasionally I find myself <em>making up excuses</em> or <em>searching euphemistic replacements</em>. Why? As we spoke many times before, you may have noticed that some forms and/or official documents do not have the word `unemployed` as a valid option. Which is specially another sour touch of humanity since we're still feeling the economic consequences of 08 . However, they do have `student` as an admissible option. And you cannot leave that field empty.</p>
+Since I still don't have a steady occupation these days, occasionally I find myself <em>making up excuses</em> or <em>searching euphemistic replacements</em>. Why? As we spoke many times before, you may have noticed that some forms and/or official documents do not have the word `unemployed` as a valid option. Which is specially another sour touch of humanity since we're still feeling the economic consequences of 08 . However, they do have `student` as an admissible option. And you cannot leave that field empty.
 
 <No>Every single time I have Raskolnikov reminiscences. No matter how many years go by.</p>
 
