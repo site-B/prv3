@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-    <SEO title="home" keywords={[`procedural`, `gatsby`]}/>
+    <SEO title="procedural" keywords={[`procedural`, `gatsby`]}/>
     <h1 className='titles'>procedural</h1>
 
     <Row>
