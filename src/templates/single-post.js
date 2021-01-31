@@ -107,11 +107,6 @@ export const postQuery = graphql`
             }
 
         }
-        site {
-            siteMetadata {
-              image
-            }
-          }
 
     }
 `
