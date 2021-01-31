@@ -7,10 +7,13 @@ import Img from 'gatsby-image';
 import { slugify } from '../utils/utilityFunctions'; 
 
 
+
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' 
     const image = post.image ? post.image.childImageSharp.resize : null
+
+
 
     return (
         <Layout>
@@ -80,7 +83,7 @@ const SinglePost = ({ data, pageContext }) => {
 
                         </ul>
                     </div>
-
+                            
         </Layout>
     )
 
