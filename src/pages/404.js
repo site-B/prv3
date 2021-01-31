@@ -10,7 +10,7 @@ const NotFoundPage = ({data}) => {
   const fluid = data.imageSharp.fluid;
 
   return (
-    <Layout pageTitle='404'>
+    <Layout>
     <SEO title="404: Not found" />
     <Card>
       <CardBody itemAlign='center' className='cardBody'>
