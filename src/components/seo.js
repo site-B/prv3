@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, image, title }) {
     `
   )
 
-  const metaDescription = allMarkdownRemark.edges.node.frontmatter.exceprt
+  const metaDescription = allMarkdownRemark.edges.node.frontmatter.excerpt
   const defaultTitle = site.siteMetadata?.title
   image = site.siteMetadata.image
 
