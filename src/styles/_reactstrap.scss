@@ -27,3 +27,15 @@
     }
 }
 
+.myPagination {
+    border: none; 
+    background-color: $light-black; 
+    color: $crimson; 
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $light-black; 
+        background-color: $crimson; 
+    }
+}

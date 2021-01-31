@@ -11,14 +11,7 @@ import { slugify } from '../utils/utilityFunctions';
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     /* const author = authors.find(x => x.name === post.author).imageUrl;  */
-    const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' // PLACEHOLDER
-
-/*     const disqusShortname = 'https-gatsbytutorial-co-uk';
-    const disqusConfig = {
-        identifier: data.markdownRemark.id,
-        title: post.title,
-        url: baseUrl + pageContext.slug
-    } PENDING */
+    const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' 
 
     return (
         <Layout>
