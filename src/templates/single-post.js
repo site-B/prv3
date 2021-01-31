@@ -95,6 +95,7 @@ export const postQuery = graphql`
                 author
                 date
                 tags
+                excerpt
                 image {
                     childImageSharp{
                         fluid(quality: 100, maxWidth: 960) {
