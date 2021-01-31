@@ -16,7 +16,7 @@ const SinglePost = ({ data, pageContext }) => {
             <SEO 
                 title={post.title}
                 description={post.excerpt}
-                image={image}
+                image={post.image}
                 author={post.author}
             />
             <h1 className='titles'>{post.title}</h1>
