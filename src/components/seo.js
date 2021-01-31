@@ -3,10 +3,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import constructUrl from '../utils/constructUrl'; 
 
-function SEO({ description, lang, imageUrl, imageAlt, meta, title }) {
-  const data = useStaticQuery(
+function SEO({ description, lang, image, meta, title }) {
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -14,27 +13,15 @@ function SEO({ description, lang, imageUrl, imageAlt, meta, title }) {
             title
             description
             author
-            twitterUsername
-            siteUrl
-          }
-        }
-        ogImageDefault: file(relativePath: {eq: "logo.png"}) {
-          childImageSharp {
-            fixed(height: 260, width: 260) {
-              src
-            }
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || data.site.siteMetadata.description
-  const defaultTitle = data.site.siteMetadata?.title
-
-  const defaultImageUrl = constructUrl(data.site.siteMetadata.siteUrl, data.ogImageDefault?.childImageSharp?.fixed?.src)
-
-  const ogImageUrl = imageUrl || defaultImageUrl; 
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
@@ -58,7 +45,7 @@ function SEO({ description, lang, imageUrl, imageAlt, meta, title }) {
         },
         {
           property: `og:image`,
-          content: ogImageUrl,
+          content: image,
         },
         {
           property: `og:type`,
@@ -66,15 +53,15 @@ function SEO({ description, lang, imageUrl, imageAlt, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: imageUrl ? `summary_large_image` : `summary`,
+          content: `summary`,
         },
         {
-          name: `twitter:image:alt`,
-          content: imageAlt || "https://elegant-bassi-d0fe18.netlify.app/logo.png",
+          name: `twitter:image`,
+          content: image
         },
         {
           name: `twitter:creator`,
-          content: data.site.siteMetadata.twitterUsername || ``,
+          content: site.siteMetadata.author || ``,
         },
         {
           name: `twitter:title`,
