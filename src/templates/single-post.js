@@ -64,23 +64,54 @@ const SinglePost = ({ data, pageContext }) => {
                     <h3 className='share-this-post text-center'>
                         Share this post
                     </h3>
-                    <div className='text-center social-share-links'>
+                    <div className="text-center social-share-links">
                         <ul>
-                            <li>
-                                <a href={'https://www.twitter.com/share?url=' + 
-                                baseUrl + 
+                        <li>
+                            <a
+                            href={
+                                'https://www.facebook.com/sharer/sharer.php?u=' +
+                                baseUrl +
+                                pageContext.slug
+                            }
+                            className="facebook"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            <i className="fab fa-facebook-f fa-2x" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                            href={
+                                'https://twitter.com/share?url=' +
+                                baseUrl +
                                 pageContext.slug +
                                 '&text=' +
                                 post.title +
                                 '&via' +
-                                'twitterHandle'}
-                                className='twitter' target='_blank'
-                                rel='noopener noreferrer'>
-                                    <i className="fab fa-twitter fa-2x"/>
-                                </a>
-                            </li>
-
-
+                                'twitterHandle'
+                            }
+                            className="twitter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            <i className="fab fa-twitter fa-2x" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                            href={
+                                'https://www.linkedin.com/shareArticle?url=' +
+                                baseUrl +
+                                pageContext.slug
+                            }
+                            className="linkedin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            <i className="fab fa-linkedin fa-2x" />
+                            </a>
+                        </li>
                         </ul>
                     </div>
                             
