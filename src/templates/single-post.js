@@ -5,17 +5,20 @@ import SEO from '../components/seo';
 import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'; 
 import Img from 'gatsby-image'; 
 import { slugify } from '../utils/utilityFunctions'; 
-/* import authors from '../utils/authors';  */
-/* import { DiscussionEmbed } from 'disqus-react'; PENDING */
+
 
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
-    /* const author = authors.find(x => x.name === post.author).imageUrl;  */
     const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' 
 
     return (
         <Layout>
-            <SEO title={post.title}/>
+            <SEO 
+                title={post.title}
+                description={post.excerpt}
+                image={post.image.childImageSharp.fluid}
+                author={post.author}
+            />
             <h1 className='titles'>{post.title}</h1>
 
                     <Card>

@@ -1,9 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -11,20 +5,24 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, image, title }) {
-  const { site } = useStaticQuery(query)
-
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-    twitterUsername
-  } = site.siteMetadata
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+            image
+          }
+        }
+      }
+    `
+  )
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  
+  image = site.siteMetadata.image
 
   return (
     <Helmet
@@ -35,10 +33,6 @@ function SEO({ description, lang, meta, image, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
           property: `og:title`,
           content: title,
         },
@@ -48,7 +42,7 @@ function SEO({ description, lang, meta, image, title }) {
         },
         {
           property: `og:image`,
-          content: defaultImage,
+          content: image,
         },
         {
           property: `og:type`,
@@ -71,17 +65,13 @@ function SEO({ description, lang, meta, image, title }) {
           content: metaDescription,
         },
         {
-          name: `twitter:image`,
-          content: defaultImage,
+          name: `twitter:card`,
+          content: 'summary_large_image',
         }
       ].concat(meta)}
     />
   )
 }
-
-
-
-export default SEO
 
 SEO.defaultProps = {
   lang: `en`,
@@ -98,15 +88,4 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-const query = graphql`
-query {
-  site {
-    siteMetadata {
-      defaultTitle: title
-      metadescription: description
-      defaultImage: image
-      twitterUsername
-    }
-  }
-}
-`
+export default SEO
