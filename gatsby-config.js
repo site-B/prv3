@@ -3,7 +3,7 @@ module.exports = {
     title: `procedural`,
     description: `Pet project of a blog. Made with graphql, gatsby, and React. Expect many surprises.`,
     author: `Víctor Balaguera`,
-    image: './src/images/main.jpg',
+    image: './images/logo.svg',
     twitterUsername: "@balaguera",
   },
   plugins: [
