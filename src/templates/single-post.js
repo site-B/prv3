@@ -10,7 +10,7 @@ import { slugify } from '../utils/utilityFunctions';
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' 
-    const image = post.frontmatter.image.childImageSharp.fluid ? post.frontmatter.image.childImageSharp.resize : null
+    const image = post.image ? post.image.childImageSharp.resize : null
 
     return (
         <Layout>
@@ -19,7 +19,6 @@ const SinglePost = ({ data, pageContext }) => {
                 description={post.excerpt}
                 image={image}
                 author={post.author}
-                pathname={this.props.location.pathname}
             />
             <h1 className='titles'>{post.title}</h1>
 
