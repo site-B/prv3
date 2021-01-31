@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, image, title }) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.url}${site.siteMetadata.image}`,
+          content: `https://elegant-bassi-d0fe18.netlify.app/logo.png`,
         },
         {
           property: `og:type`,
