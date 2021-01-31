@@ -5,6 +5,7 @@ module.exports = {
     author: `Víctor Balaguera`,
     image: `/images/logo.png`,
     twitterUsername: "@balaguera",
+    siteUrl: "https://elegant-bassi-d0fe18.netlify.app/", //PLACEHOLDER
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -25,6 +26,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages/posts`,
       },
     },
     {

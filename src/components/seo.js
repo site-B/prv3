@@ -3,9 +3,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import constructUrl from '../utils/constructUrl'; 
 
-function SEO({ description, lang, image, meta, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, lang, imageUrl, imageAlt, meta, title }) {
+  const data = useStaticQuery(
     graphql`
       query {
         site {
@@ -13,15 +14,27 @@ function SEO({ description, lang, image, meta, title }) {
             title
             description
             author
-            image
+            twitterUsername
+            siteUrl
+          }
+        }
+        ogImageDefault: file(relativePath: {eq: "logo.png"}) {
+          childImageSharp {
+            fixed(height: 260, width: 260) {
+              src
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || data.site.siteMetadata.description
+  const defaultTitle = data.site.siteMetadata?.title
+
+  const defaultImageUrl = constructUrl(data.site.siteMetadata.siteUrl, data.ogImageDefault?.childImageSharp?.fixed?.src)
+
+  const ogImageUrl = imageUrl || defaultImageUrl; 
 
   return (
     <Helmet
@@ -45,7 +58,7 @@ function SEO({ description, lang, image, meta, title }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: ogImageUrl,
         },
         {
           property: `og:type`,
@@ -53,15 +66,15 @@ function SEO({ description, lang, image, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: imageUrl ? `summary_large_image` : `summary`,
         },
         {
-          name: `twitter:image`,
-          content: image
+          name: `twitter:image:alt`,
+          content: imageAlt || "https://elegant-bassi-d0fe18.netlify.app/logo.png",
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author || ``,
+          content: data.site.siteMetadata.twitterUsername || ``,
         },
         {
           name: `twitter:title`,
