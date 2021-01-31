@@ -10,7 +10,7 @@ import { slugify } from '../utils/utilityFunctions';
 const SinglePost = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter; 
     const baseUrl = 'https://elegant-bassi-d0fe18.netlify.app/' 
-    const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null
+    const image = post.frontmatter.image.childImageSharp.fluid ? post.frontmatter.image.childImageSharp.resize : null
 
     return (
         <Layout>
