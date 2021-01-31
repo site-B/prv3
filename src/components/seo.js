@@ -18,7 +18,7 @@ function SEO({ description, lang, meta, image, title }) {
       }
     `
   )
-
+ 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const imageSrc = image && image.childImageSharp.sizes.src; 
