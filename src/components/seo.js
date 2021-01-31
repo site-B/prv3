@@ -45,7 +45,7 @@ function SEO({ description, lang, image, meta, title }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: "https://elegant-bassi-d0fe18.netlify.app/logo.png",
         },
         {
           property: `og:type`,
@@ -57,7 +57,7 @@ function SEO({ description, lang, image, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: image
+          content: "https://elegant-bassi-d0fe18.netlify.app/twitterimage.png",
         },
         {
           name: `twitter:creator`,
