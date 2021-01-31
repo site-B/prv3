@@ -13,12 +13,13 @@ function SEO({ description, lang, meta, image, title }) {
             title
             description
             author
+            image
           }
         }
       }
     `
   )
- 
+
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const imageSrc = image && image.childImageSharp.sizes.src; 
