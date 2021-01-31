@@ -73,6 +73,7 @@
   .sidebarTitle {
     font-weight: 900; 
     color: $crimson; 
+    font-size: 1.1rem; 
   }
 
   .sidebarText, .copyrightText {
@@ -81,6 +82,7 @@
 
   p, .sidebarText {
     line-height: 1.6rem; // this is questionable
+    font-size: 1.1rem; 
   }
 
   .post-title {
