@@ -93,7 +93,7 @@ function SEO({ description, lang, image: metaImage, meta, title, pathname }) {
           },
           {
             name: "twitter:card", 
-            content: "summary_large_image",
+            content: image,
           },
         ]
         : [
