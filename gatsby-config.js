@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `procedural`,
-    description: `Pet project of a blog. Made with graphql, gatsby, and React. Expect many surprises.`,
+    description: `Made in Madrid`,
     author: `Víctor Balaguera`,
-    image: `images/logo.png`,
+    image: `/images/logo.png`,
     twitterUsername: "@balaguera",
   },
   plugins: [
