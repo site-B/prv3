@@ -13,7 +13,6 @@ function SEO({ description, lang, meta, image, title }) {
             title
             description
             author
-            image
           }
         }
       }
@@ -22,6 +21,12 @@ function SEO({ description, lang, meta, image, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const imageSrc = image && image.childImageSharp.sizes.src; 
+  let origin = '';
+  if (typeof window !== 'undefined') {
+    origin = window.location.origin; 
+  }
+  const image = origin + imageSrc; 
 
   return (
     <Helmet
@@ -45,7 +50,7 @@ function SEO({ description, lang, meta, image, title }) {
         },
         {
           property: `og:image`,
-          content: `https://elegant-bassi-d0fe18.netlify.app/logo.png`,
+          content: image,
         },
         {
           property: `og:type`,
@@ -57,7 +62,7 @@ function SEO({ description, lang, meta, image, title }) {
         },
         {
           name: `twitter:image`,
-          content: `https://elegant-bassi-d0fe18.netlify.app/logo.png`
+          content: image,
         },
         {
           name: `twitter:creator`,
