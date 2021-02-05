@@ -1,6 +1,7 @@
 import React from 'react'; 
 import logo from '../images/logo.svg'; 
 import { Link } from 'gatsby'; 
+import Clock from './clock'; 
 
 const Footer = () => (
     <div className='site-footer'>
@@ -16,6 +17,7 @@ const Footer = () => (
         <p className='copyrightText text-center'>
         Everything else belongs to their respective owners.
         </p>
+        <Clock/>
     </div>
 ); 
 
