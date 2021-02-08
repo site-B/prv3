@@ -109,7 +109,7 @@ class Sidebar extends React.Component {
                     </CardBody>
                 </Card>
             
-            </div>
+            </div> 
         )
     }
 }
