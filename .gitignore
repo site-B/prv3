@@ -73,3 +73,5 @@ notes.md
 
 # team page: 
 src/pages/team.js 
+
+src/components/Joke.js 
