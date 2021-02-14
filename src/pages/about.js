@@ -19,17 +19,16 @@ const AboutPage = () => (
         </img>
       </div>
       <div className='col-md-8'>
-        <Card style={{ minHeight: '100%', color: 'crimson'}}>
+        <Card style={{ minHeight: '100%', color: 'white'}}>
           <CardBody className='cardBody'>
             <CardTitle className='titles'>
-              {authors[0].name}
+              <h4>{authors[0].name}</h4>
             </CardTitle>
-            <br></br>
             <CardText>
               {authors[0].bio}
             </CardText>
             <CardText>
-            This blog is a small side-project designed as an excellent excuse to finally tackle GraphQL, Gatsby, and Bootstrap through Reactstrap.
+            This blog is a small side-project designed as an excellent excuse to finally tackle GraphQL, Gatsby, <a href='https://type.fit/api/' target='_blank'>API</a>s through Axios, and Bootstrap through Reactstrap.
             </CardText>
             <CardText>
               <Link to='mailto:victorbalaguera@protonmail.com'>Contact info: victorbalaguera@protonmail.com</Link>

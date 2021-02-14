@@ -14,7 +14,7 @@ const opts = {
 
 
 function Sidebar() {
-    const [posts, setPosts] = useState([])
+    const [quotes, setQuotes] = useState([])
     const x = Math.floor((Math.random() * 1642) + 1);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ function Sidebar() {
             .get('https://type.fit/api/quotes')
             .then(res => {
                 console.log(res)
-                setPosts(res.data)
+                setQuotes(res.data)
             })
             .catch(error => {
                 console.log(error)
@@ -33,16 +33,21 @@ function Sidebar() {
     return (
         <div>
     
-            <Card className='cardBody'>
-                <CardTitle className='sidebarTitle text-center mb-3'>
-                    Today's quote
-                </CardTitle>
-                {
-                    posts.map(
-                        post => (
-                        <ul>{post.text} <p></p>{post.author}</ul>
-                    )).slice(x, x + 1)
-                }
+            <Card>
+                <CardBody className='cardBody'>
+                    <CardTitle className='sidebarTitle text-center mb-3'>
+                        Today's quote
+                    </CardTitle>
+                    {
+                        quotes.map(
+                            quote => (
+                            <CardText className='sidebarText'><p className='quotes'>
+                            {quote.text}
+                            </p> 
+                            <p>{quote.author}</p></CardText>
+                        )).slice(x, x + 1)
+                    }
+                </CardBody>
             </Card>
 
         <Card>
@@ -51,10 +56,10 @@ function Sidebar() {
                     Today's video
                 </CardTitle>
                 <CardText className='sidebarText'>
-                    The first seconds of Mr. Self Destruct (from NIN's <a href='https://open.spotify.com/album/3nJnyDV8fwFpffo0EyHQto?autoplay=true' target='_blank' rel="noreferrer">The Downward Spiral</a>) belong to 1971's <a href='https://www.imdb.com/title/tt0066434/?ref_=nv_sr_srsg_0' target='_blank' rel="noreferrer">THX 1138</a>. The first film by George Lucas. 
+                    
                 </CardText>
                 <YouTube opts={opts}
-                    videoId="cOppY-p7gQI"
+                    videoId="VC2_SL4EX1s"
                 />
             </CardBody>
         </Card>
@@ -64,11 +69,8 @@ function Sidebar() {
                     TIL
                 </CardTitle>
                 <CardText className='sidebarText'>
-                The Future Refused To Change. 
+                The Mozambique Drill (AKA the Failure Drill, or Failure to Stop drill) is a close-quarters shooting technique where the shooters fires twice into the targert's torso and head. In that order. The technique was somewhat popularized by the films Collateral and Heat. Both directed by Michael Mann.  
                 </CardText>
-                <YouTube opts={opts}
-                    videoId="cMP9PPOoFiw"
-                />
             </CardBody>
         </Card>
         <Card>
