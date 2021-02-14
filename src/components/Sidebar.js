@@ -56,7 +56,7 @@ function Sidebar() {
                     Today's video
                 </CardTitle>
                 <CardText className='sidebarText'>
-                    
+                    This would make for an interesting text
                 </CardText>
                 <YouTube opts={opts}
                     videoId="VC2_SL4EX1s"
