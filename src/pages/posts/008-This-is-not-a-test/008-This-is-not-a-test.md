@@ -7,8 +7,6 @@ tags:
 - The Old Blood
 - Armas nucleares
 - Mutua Destrucción Asegurada
-- Threads
-- The War Game 
 excerpt: El siguiente texto fue publicado...
 ---
 <br>
