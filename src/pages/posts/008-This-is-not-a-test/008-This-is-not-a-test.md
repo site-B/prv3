@@ -56,12 +56,7 @@ excerpt: El siguiente texto fue publicado...
 <iframe width="100%" height="450" margin='auto' src="https://www.youtube.com/embed/lWt4Di6zr14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br><br>
 
-<p>Después Threads (1984, Mick Jackson):</p>
-
-<br>
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x121ctu?autoplay=1" width="100%" height="100%"> </iframe> </div> <br>
-
-<p>Y finalmente: The War Game (1965, Peter Watkins):</p>
+<p>Después <a href="https://archive.org/details/threads_201712" target="_blank" rel="noreferrer">Threads</a> (1984, Mick Jackson). Y finalmente: The War Game (1965, Peter Watkins):</p>
 
 <br>
 <iframe src="https://player.vimeo.com/video/132773156" width="100%" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
