@@ -14,7 +14,7 @@ const opts = {
 
 
 function Sidebar() {
-    const [quotes, setQuotes] = useState([])
+/*     const [quotes, setQuotes] = useState([])
     const x = Math.floor((Math.random() * 1642) + 1);
 
     useEffect(() => {
@@ -27,13 +27,13 @@ function Sidebar() {
             .catch(error => {
                 console.log(error)
             })
-    }, [])
+    }, []) */
     
 
     return (
         <div>
     
-            <Card>
+{/*             <Card>
                 <CardBody className='cardBody'>
                     <CardTitle className='sidebarTitle text-center mb-3'>
                         Today's quote
@@ -48,7 +48,7 @@ function Sidebar() {
                         )).slice(x, x + 1)
                     }
                 </CardBody>
-            </Card>
+            </Card> */}
 
         <Card>
             <CardBody className='cardBody'>
