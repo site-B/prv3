@@ -56,8 +56,6 @@ excerpt: El siguiente texto fue publicado...
 <iframe width="100%" height="450" margin='auto' src="https://www.youtube.com/embed/lWt4Di6zr14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br><br>
 
-<p>Después <a href="https://archive.org/details/threads_201712" target="_blank" rel="noreferrer">Threads</a> (1984, Mick Jackson). Y finalmente: The War Game (1965, Peter Watkins):</p>
+<p>Después <a href="https://archive.org/details/threads_201712" target="_blank" rel="noreferrer">Threads</a> (1984, Mick Jackson). Y finalmente: <a href="https://archive.org/details/TheWarGame_201405" target="_blank" rel="noreferrer">The War Game</a> (1965, Peter Watkins):</p>
 
-<br>
-<iframe src="https://player.vimeo.com/video/132773156" width="100%" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<br><br>
+Buena suerte. 
