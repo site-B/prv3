@@ -71,6 +71,9 @@ function Sidebar() {
                 <CardText className='sidebarText'>
                 The Mozambique Drill (AKA the Failure Drill, or Failure to Stop drill) is a close-quarters shooting technique where the shooters fires twice into the targert's torso and head. In that order. The technique was somewhat popularized by the films Collateral and Heat. Both directed by Michael Mann.  
                 </CardText>
+                <YouTube opts={opts}
+                    videoId="O8QrWm3Acc0"
+                />
             </CardBody>
         </Card>
         <Card>
